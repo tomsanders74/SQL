@@ -1,0 +1,15 @@
+-- Create a grocery store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, department TEXT, price INTEGER, quantity INTEGER);
+
+INSERT INTO store VALUES (1, "bike", "Toys", 4, 10);
+INSERT INTO store VALUES (2, "sweater", "Clothing", 7, 20);
+INSERT INTO store VALUES (3, "jeans", "Clothing", 8, 15);
+INSERT INTO store VALUES (4, "wrench", "Tools", 2, 5);
+INSERT INTO store VALUES (5, "microwave", "Electronics", 1, 7);
+
+-- display the database ordered by price
+SELECT item, price FROM store ORDER BY price;
+
+-- display the sum of the items in the grocery store
+SELECT SUM(quantity) FROM store;
